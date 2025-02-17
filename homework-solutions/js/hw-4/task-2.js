@@ -20,7 +20,7 @@ let maxAge = 60;
 // let age = prompt("Enter your age:");
 let age = 62;
 
-if (isNaN(age)) {
+if (typeof age !== 'number') {
   console.log('Incorrect data type');
 } else {
   if (age < minAge) {
