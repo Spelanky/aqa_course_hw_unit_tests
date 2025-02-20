@@ -5,6 +5,14 @@
  */
 
 let evenNumbersResult = '';
+for (let i = 10; i >= 0; i--) {
+  if (i % 2 === 0) {
+    evenNumbersResult += i;
+  } else {
+    evenNumbersResult += '-';
+  }
+}
+console.log(evenNumbersResult);
 
 /**
  * Создать строку из 5 строк с увеличивающимся количеством смайликов ":)".
