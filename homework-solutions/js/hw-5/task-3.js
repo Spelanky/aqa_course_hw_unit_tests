@@ -5,6 +5,20 @@
  */
 const word = 'hello';
 
-let vowelsAndConsonantsResult = '';
+const vowelsList = 'AEIOUaeiou';
+const consonantsList = 'BCDFGHJKLMNPQRSTVWXYZbcdfghjklmnpqrstvwxyz';
+let wowelQuantity = 0;
+let consonantsQuantity = 0;
+
+for (let i = 0; i < word.length; i++) {
+  if (vowelsList.includes(word[i])) {
+    wowelQuantity += 1;
+  } else if (consonantsList.includes(word[i])) {
+    consonantsQuantity += 1;
+  }
+}
+
+let vowelsAndConsonantsResult = `${word} contains ${wowelQuantity} vowels and ${consonantsQuantity} consonants`;
+console.log(vowelsAndConsonantsResult);
 
 export { vowelsAndConsonantsResult };

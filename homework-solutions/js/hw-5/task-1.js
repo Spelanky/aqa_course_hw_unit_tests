@@ -30,8 +30,8 @@ for (let i = 1; i <= 5; i++) {
   //   for (let j = 0; j < i; j++) {
   //     smilePatternResult += ':)';
   //   }
-  smilePatternResult += ':)'.repeat(i);
-  smilePatternResult += `\n`;
+  //   smilePatternResult += `\n`;
+  smilePatternResult += `:)`.repeat(i) + `\n`;
 }
 smilePatternResult = smilePatternResult.trimEnd();
 console.log(smilePatternResult);
