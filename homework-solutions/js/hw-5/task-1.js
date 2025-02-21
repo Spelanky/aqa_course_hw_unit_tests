@@ -7,10 +7,8 @@
 let evenNumbersResult = '';
 for (let i = 10; i >= 0; i--) {
   if (i % 2 === 0) {
-    // Если i делится на 2 без остатка (чётное число)
     evenNumbersResult += i;
   } else {
-    // Если i не делится на 2 без остатка (нечётное), то добавляем в строку '-'
     evenNumbersResult += '-';
   }
 }
@@ -27,21 +25,16 @@ console.log(evenNumbersResult);
  * :):):):):)
  */
 
-// Внешний цикл создает ряды смайликов
-// Вложенный цикл добавляет смайлики в строку
 let smilePatternResult = '';
-let smile = `:)`;
 for (let i = 1; i <= 5; i++) {
-  for (let j = 0; j < i; j++) {
-    smilePatternResult += `${smile}`;
-  }
+  //   for (let j = 0; j < i; j++) {
+  //     smilePatternResult += ':)';
+  //   }
+  smilePatternResult += ':)'.repeat(i);
   smilePatternResult += `\n`;
 }
 smilePatternResult = smilePatternResult.trimEnd();
-
 console.log(smilePatternResult);
-// После каждого ряда смайликов добавляем переход на новую строку.
-// В конце окажется лишний \n, который убираем с .trimEnd().
 
 /**
  * Заменить все пробелы в переменной text на "1".
