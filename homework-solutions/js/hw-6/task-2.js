@@ -13,7 +13,51 @@
   const myPizzasT2 = ['Peperoni', 'Caprichosa', 'Diablo', '4 cheeses', 'hawai'];
 */
 
-let resultUnique;
-let resultNull;
+let resultUnique = [];
+let resultNull = null;
+let hasUniquePizzas = false;
+
+const competitorPizzas = ['Peperoni', 'Caprichosa', 'Diablo', '4 cheeses', 'hawai'];
+const myPizzasT1 = ['Peperoni', 'Margherita', 'Diablo', 'Vegetarian'];
+const myPizzasT2 = ['Peperoni', 'Caprichosa', 'Diablo', '4 cheeses', 'hawai'];
+
+const competitorPizzasLower = [];
+const myPizzasT2Lower = [];
+const myPizzasT1Lower = [];
+
+//Arrays to lowercase
+for (let pizza of competitorPizzas) {
+  competitorPizzasLower.push(pizza.toLowerCase());
+}
+
+for (let myPizza1 of myPizzasT1) {
+  myPizzasT1Lower.push(myPizza1.toLowerCase());
+}
+
+for (let myPizza2 of myPizzasT2) {
+  myPizzasT2Lower.push(myPizza2.toLowerCase());
+}
+
+// Comparing
+for (let i = 0; i < myPizzasT1.length; i++) {
+  if (!competitorPizzasLower.includes(myPizzasT1Lower[i])) {
+    resultUnique.push(myPizzasT1Lower[i]);
+    hasUniquePizzas = true;
+  }
+}
+
+for (let i = 0; i < myPizzasT2.length; i++) {
+  if (!competitorPizzasLower.includes(myPizzasT2Lower[i])) {
+    resultUnique.push(myPizzasT2[i]);
+    hasUniquePizzas = true;
+  }
+}
+
+if (!hasUniquePizzas) {
+  resultNull = null;
+}
+
+console.log(resultUnique);
+console.log(resultNull);
 
 export { resultNull, resultUnique };
