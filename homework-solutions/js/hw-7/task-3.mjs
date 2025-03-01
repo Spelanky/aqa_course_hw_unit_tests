@@ -9,7 +9,20 @@
 */
 
 function digitalRoot(number) {
-  // Ваш код
+  const numberArray = String(number).split('');
+  let sumArray = 0;
+  for (number of numberArray) {
+    sumArray += Number(number);
+  }
+
+  return sumArray > 9 ? digitalRoot(sumArray) : sumArray;
 }
+console.log(digitalRoot(144));
+
+//! 2й вариант
+// function digitalRoot(n) {
+//   return ((n - 1) % 9) + 1;
+// }
+// console.log(digitalRoot(144));
 
 export { digitalRoot };
