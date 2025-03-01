@@ -15,12 +15,6 @@ function mergeArrays(...arrays) {
 }
 console.log(mergeArrays([1, 2], [3, 4], [5, 6]));
 
-//! 2й вариант
-// function mergeArrays(...arrays) {
-//   return [].concat(...arrays);
-// }
-// console.log(mergeArrays([1, 2], [3, 4], [5, 6]));
-
 /*
   2. Devide by _
     - Написать функцию, которая преобразует любое предложение в вот_Такой_Вот_Вид и возвращает его. 

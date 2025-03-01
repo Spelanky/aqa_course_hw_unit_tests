@@ -16,13 +16,6 @@ function isPalindrom(word) {
   return word.toLowerCase() === reverseword.toLowerCase();
 }
 
-//! 2й вариант
-// function isPalindrom(word) {
-//   if (typeof word !== 'string') return false;
-//   return word.toLowerCase() === word.toLowerCase().split('').reverse().join('');
-// }
-//!
-
 /*
  2. findLongestWords()
  Написать функцию, которая принимает предложение (слова разделенные только пробелами) в качестве параметра 
@@ -52,17 +45,5 @@ function findLongestWords(sentence) {
   return resultArray;
 }
 console.log(findLongestWords('i dont know javascrypt javascrypt'));
-
-//! 2й вариант
-// function findLongestWords(sentence) {
-//   if (!sentence || typeof sentence !== 'string') return [];
-
-//   const sentenceArray = sentence.split(' ');
-//   const maxLength = Math.max(...sentenceArray.map(word => word.length));
-
-//   return sentenceArray.filter(word => word.length === maxLength);
-// }
-// console.log(findLongestWords('i dont know javascrypt javascrypt'));
-//!
 
 export { isPalindrom, findLongestWords };
